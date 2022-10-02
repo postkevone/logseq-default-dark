@@ -1,0 +1,160 @@
+/* ----------------DARK THEME COLORS---------------- */
+
+.dark-theme, html[data-theme=dark] {
+  --ls-primary-background-color: #161616;
+  --ls-secondary-background-color: #242424;
+  --ls-tertiary-background-color: #323232;
+  --ls-quaternary-background-color: #404040;
+
+  --ls-primary-text-color: #ccc;
+  --ls-title-text-color: var(--ls-primary-text-color);
+
+  --ls-secondary-text-color: #969696;
+
+  --ls-block-ref-link-text-color: var(--ls-link-text-color);
+
+  --ls-block-properties-background-color: var(--ls-secondary-background-color);
+  --ls-page-properties-background-color: var(--ls-secondary-background-color);
+  --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
+  --ls-page-inline-code-bg-color: var(--ls-secondary-background-color);
+  --ls-a-chosen-bg: var(--ls-secondary-background-color);
+
+  --ls-link-text-color: #5AC8FA;
+  --ls-link-text-hover-color: #34AADC;
+  --ls-link-ref-text-color: var(--ls-link-text-color);
+  --ls-link-ref-text-hover-color: var(--ls-link-text-hover-color);
+
+  --ls-page-inline-code-color: var(--ls-primary-text-color);
+
+  --ls-block-highlight-color: var(--ls-tertiary-background-color);
+  --ls-selection-background-color: var(--ls-tertiary-background-color);
+
+  --ls-border-color: var(--ls-quaternary-background-color);
+  --ls-block-bullet-color: var(--ls-quaternary-background-color);
+  --ls-block-bullet-border-color: var(--ls-secondary-background-color);
+  --ls-guideline-color: rgba(40, 40, 40, .8);
+  --ls-scrollbar-foreground-color: #8a8a8a3d;
+  --ls-scrollbar-background-color: #fff0;
+  --bf-scrollbar-thumb-hover-color: #8a8a8a61;
+
+  --table-border-color: var(--ls-block-bullet-color);
+
+  --ls-cloze-text-color: var(--ls-link-text-color);
+
+  --ls-tag-text-color: #5cb85c;
+  --ls-tag-text-hover-color: rgba(92, 184, 92, .8);
+}
+
+/* ----------------CODE MIRROR)---------------- */
+
+/* no highlight text colour */
+.CodeMirror pre>span {color: var(--ls-primary-text-color)}
+/* main bg */
+.cm-s-solarized.CodeMirror,
+.cm-s-solarized.cm-s-light.CodeMirror,
+.cm-s-solarized.cm-s-dark.CodeMirror {
+  background: var(--ls-secondary-background-color);
+  text-shadow: unset;
+}
+/* sidebar bg */
+.cm-s-solarized .CodeMirror-gutters,
+.cm-s-solarized.cm-s-light .CodeMirror-gutters,
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+  background: var(--ls-tertiary-background-color)
+}
+/* line numbers */
+.cm-s-solarized .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber {
+  color: var(--ls-secondary-text-color);
+  text-shadow: unset;
+}
+
+/* active line */
+.dark-theme .cm-s-solarized.cm-s-light .CodeMirror-activeline-background,
+.cm-s-solarized.cm-s-dark .CodeMirror-activeline-background {
+  background: var(--ls-primary-background-color)
+}
+/* selected */
+.dark-theme .cm-s-solarized.cm-s-dark div.CodeMirror-selected {
+  background: var(--ls-tertiary-background-color)
+}
+.dark-theme .cm-s-solarized.cm-s-dark.CodeMirror ::selection {
+  background: var(--ls-tertiary-background-color)
+}
+.dark-theme .cm-s-solarized.cm-s-dark .CodeMirror-line::-moz-selection,
+.dark-theme .cm-s-dark .CodeMirror-line > span::-moz-selection,
+.dark-theme .cm-s-dark .CodeMirror-line > span > span::-moz-selection {
+  background: var(--ls-tertiary-background-color)
+}
+.dark-theme .cm-s-solarized.cm-s-light div.CodeMirror-selected {
+  background: var(--ls-tertiary-background-color)
+}
+.dark-theme .cm-s-solarized.cm-s-light .CodeMirror-line::selection,
+.dark-theme .cm-s-light .CodeMirror-line > span::selection,
+.dark-theme .cm-s-light .CodeMirror-line > span > span::selection {
+  background: var(--ls-tertiary-background-color)
+}
+.dark-theme .cm-s-solarized.cm-s-light .CodeMirror-line::-moz-selection,
+.dark-theme .cm-s-light .CodeMirror-line > span::-moz-selection,
+.dark-theme .cm-s-light .CodeMirror-line > span > span::-moz-selection {
+  background: var(--ls-tertiary-background-color)
+}
+
+/* ----------------TABS---------------- */
+
+.text-xs {display: none} /* hide the P and B */
+.text-blue-600 {display: none} /* hide the ● */
+.logseq-tab {border: initial} /* no border */
+/* light */
+.light .close-all, .light .logseq-tab:hover {color: #433f38 !important} /* text color on hover */
+.light .logseq-tab[data-active=false] {background: #f7f7f7} /* bg color when not active*/
+.light .logseq-tab[data-active=true] {background: #fff} /* bg color when active*/
+.light .logseq-tab button:hover {background: #dcdcdc} /* close button bg */
+/* dark */
+.dark .logseq-tab {color: rgb(193, 193, 193) !important} /* text color */
+.dark .close-all, .dark .logseq-tab:hover {color: #969696 !important} /* text color on hover */
+.dark .logseq-tab[data-active=false] {background: #242424} /* bg color when not active*/
+.dark .logseq-tab[data-active=true] {background: #161616} /* bg color when active*/
+.dark .logseq-tab button:hover {background: #323232} /* close button bg */
+
+/* ----------------OTHER PLUGINS---------------- */
+
+/* color of toolbar buttons (padf, top-right) */
+.extensions__pdf-toolbar>.inner>.r a.button, .ui-items-container[data-type=toolbar] a {color: var(--ls-primary-text-color)}
+
+/* flashcards border on the right for better visibility */
+div[data-refs-self*='"card"'] {
+  border-radius: 0;
+  border-right: .5rem solid var(--ls-secondary-background-color);
+}
+
+/* change anki sync confirmation text (needed for dark theme) */
+.anki_sync_confirm {color: var(--ls-primary-text-color)}
+
+/* ----------------OTHER TWEAKS---------------- */
+
+/* reduce animations */
+*, ::before, ::after {--tw-transform: initial}
+
+/* make ruby and paragraph div inline for furigana */
+.raw_html, .is-paragraph {display: inline-block}
+
+/* set tag opacity to 1 */
+.page-reference[data-ref=card], a[data-ref=card] {opacity: 1}
+
+/* highlight color */
+:is(.dark, .dark-theme) mark {background: #F9E67A}
+
+/* don't change sidebar color */
+@media screen and (max-width: 640px) {
+  .left-sidebar-inner {background-color: var(--ls-secondary-background-color)}
+}
+
+/* right sidebar resize bar */
+.cp__right-sidebar .resizer:active, .cp__right-sidebar .resizer:focus, .cp__right-sidebar .resizer:hover {
+  background: transparent;
+}
+
+/* hide shadow error bottom left (developer build) */
+/* #shadow-connection-error {display: none} */
